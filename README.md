@@ -16,12 +16,13 @@ Odświeżanie co 20 s (tyle API cache'uje dane), czas pokazywany w strefie Europ
 - `index.html`, `css/style.css`, `js/app.js`, `js/config.js`
 - `manifest.webmanifest`, `sw.js` (cache tylko powłoki aplikacji – odjazdy zawsze z sieci)
 - `icons/` – 192, 512, maskable 512, apple-touch
-- `proxy/worker.js` – opcjonalny Cloudflare Worker, gdyby API zaczęło blokować CORS
-  (wtedy ustaw `proxyBase` w `js/config.js`).
+- `proxy/worker.js` – Cloudflare Worker (proxy tylko do odczytu, tylko słupki 2030/2031).
+  **Wymagany**: API ZTM nie wysyła nagłówków CORS, więc przeglądarka blokuje bezpośredni fetch.
+  Wdrożony pod `https://tramwaje-proxy.pb-jankowski.workers.dev` (adres w `js/config.js` → `proxyBase`).
 
 ## Publikacja
 GitHub Pages: Settings → Pages → Deploy from a branch → `main` / `(root)`.
-Adres: `https://<użytkownik>.github.io/tramwaje-gdansk/`
+Adres: https://999gf999.github.io/tramwaje-gdansk/
 
 ## Instalacja na Androidzie
 Chrome → otwórz adres → menu ⋮ → **Zainstaluj aplikację** / **Dodaj do ekranu głównego**.
