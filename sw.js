@@ -1,6 +1,6 @@
 // Service Worker – cache'uje wyłącznie powłokę aplikacji.
 // Dane odjazdów (API / proxy) zawsze idą do sieci i NIE są cache'owane.
-const VERSION = 'tramwaje-v3';
+const VERSION = 'tramwaje-v4';
 const SHELL = [
   './',
   './index.html',

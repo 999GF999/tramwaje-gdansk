@@ -8,8 +8,9 @@ window.TRAM_CONFIG = {
   // Przykład: 'https://tramwaje-proxy.TWOJ-SUBDOMAIN.workers.dev/departures?stopId='
   proxyBase: 'https://tramwaje-proxy.pb-jankowski.workers.dev/departures?stopId=',
   stops: [
-    { id: 2031, label: '01' },
-    { id: 2030, label: '02' }
+    // Kolejność = kolejność na ekranie.
+    { id: 2030, label: '02' },
+    { id: 2031, label: '01' }
   ],
   refreshMs: 20000,
   maxRows: 7,

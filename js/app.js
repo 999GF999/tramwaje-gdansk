@@ -21,8 +21,7 @@
       el,
       list: el.querySelector('.list'),
       status: el.querySelector('.status'),
-      dir: el.querySelector('.dir'),
-      arrow: s.id === 2031 ? '←' : '→',
+      via: el.querySelector('.via'),
       departures: null,
       lastOk: 0,
       error: null
@@ -83,11 +82,10 @@
   }
 
   function directionLabel(st) {
-    // Nagłówek kierunku budowany z aktualnych danych (najczęstsze kierunki).
-    const counts = new Map();
-    for (const d of st.departures || []) counts.set(d.headsign, (counts.get(d.headsign) || 0) + 1);
-    const top = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 2).map((e) => e[0]);
-    if (top.length) st.dir.textContent = `${st.arrow} ${top.join(' / ').toUpperCase()}`;
+    // Stała nazwa kierunku jest w HTML; tu dopisujemy aktualne cele z API.
+    const seen = [];
+    for (const d of st.departures || []) if (!seen.includes(d.headsign)) seen.push(d.headsign);
+    st.via.textContent = seen.length ? 'Kursy do: ' + seen.join(', ') : '';
   }
 
   function renderStop(st, now) {
