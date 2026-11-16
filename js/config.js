@@ -6,7 +6,7 @@ window.TRAM_CONFIG = {
   // nagłówków CORS (sprawdzone 16.11.2026: brak Access-Control-Allow-Origin,
   // preflight → 403 "Invalid CORS request"), więc przeglądarka blokuje bezpośredni fetch.
   // Przykład: 'https://tramwaje-proxy.TWOJ-SUBDOMAIN.workers.dev/departures?stopId='
-  proxyBase: '',
+  proxyBase: 'https://tramwaje-proxy.pb-jankowski.workers.dev/departures?stopId=',
   stops: [
     { id: 2031, label: '01' },
     { id: 2030, label: '02' }
