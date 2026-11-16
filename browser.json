@@ -1,0 +1,75 @@
+{
+ "sw": {
+  "scope": "https://999gf999.github.io/tramwaje-gdansk/",
+  "active": true
+ },
+ "manifest": {
+  "id": "./",
+  "name": "Tramwaje Gdańsk",
+  "short_name": "Tramwaje",
+  "description": "Odjazdy tramwajów na żywo – Wilka-Krzyżanowskiego, Gdańsk",
+  "lang": "pl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#08131d",
+  "theme_color": "#08131d",
+  "icons": [
+   {
+    "src": "icons/icon-192.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "any"
+   },
+   {
+    "src": "icons/icon-512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "any"
+   },
+   {
+    "src": "icons/icon-maskable-512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "maskable"
+   }
+  ]
+ },
+ "text": "🚋\nWILKA-KRZYŻANOWSKIEGO\nAktualizacja: 14:31:38\n↻ Odśwież\n01\n← STRZYŻA PKM / ZASPA\n12\nZaspa\n14:34 ● na żywo −2 min\n2 min\n9\nStrzyża PKM\n14:36 ● na żywo +5 min\n4 min\n9\nStrzyża PKM\n14:38 ● na żywo\n6 min\n6\nJelitkowo\n14:43 ● na żywo −2 min\n11 min\n11\nStrzyża PKM\n14:43 ● na żywo +2 min\n11 min\n9\nStrzyża PKM\n14:45 ● na żywo −2 min\n13 min\n12\nZaspa\n14:46 ● na żywo −2 min\n15 min\n\n02\n→ ŁOSTOWICE ŚWIĘTOKRZYSKA / UJEŚCISKO\n6\nŁostowice Świętokrzyska\n14:31 ● na żywo\nTERAZ\n12\nUjeścisko\n14:35 ● na żywo −3 min\n3 min\n11\nLawendowe Wzgórze\n14:37 ● na żywo +1 min\n5 min\n9\nGłęboka\n14:38 ● na żywo −1 min\n7 min\n6\nŁostowice Świętokrzyska\n14:39 ● na żywo −2 min\n7 min\n5\nNowy Port Zajezdnia\n14:41 ● na żywo −3 min\n9 min\n11\nLawendowe Wzgórze\n14:46 rozkład\n14 min\n\nDane: ZTM Gdańsk / TRISTAR (Otwarte Dane Gdańsk) · odświeżanie co 20 s",
+ "url": "https://999gf999.github.io/tramwaje-gdansk/",
+ "controlled": true,
+ "offline_text": "🚋\nWILKA-KRZYŻANOWSKIEGO\nBrak danych\n↻ Odśwież\nBrak połączenia z internetem.\nWyświetlane dane mogą być nieaktualne.\n01\n← STRZYŻA / OLIWA / ZASPA\nNie udało się pobrać danych.\nSpróbuj odświeżyć za chwilę.\n\n02\n→ PRZECIWNY KIERUNEK\nNie udało się pobrać danych.\nSpróbuj odświeżyć za chwilę.\n\nDane: ZTM Gdańsk / TRISTAR (Otwarte Dane Gdańsk) · odświeżanie co 20 s",
+ "logs": [
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/js/config.js",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/css/style.css",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/js/app.js",
+  "RESP 200 https://tramwaje-proxy.pb-jankowski.workers.dev/departures?stopId=2031",
+  "RESP 200 https://tramwaje-proxy.pb-jankowski.workers.dev/departures?stopId=2030",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/icons/icon-192.png",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/manifest.webmanifest",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/css/style.css",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/js/config.js",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/js/app.js",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/icons/icon-192.png",
+  "RESP 200 https://tramwaje-proxy.pb-jankowski.workers.dev/departures?stopId=2030",
+  "RESP 200 https://tramwaje-proxy.pb-jankowski.workers.dev/departures?stopId=2031",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/css/style.css",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/js/config.js",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/js/app.js",
+  "FAILED https://tramwaje-proxy.pb-jankowski.workers.dev/departures?stopId=2031 net::ERR_INTERNET_DISCONNECTED",
+  "error: Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+  "FAILED https://tramwaje-proxy.pb-jankowski.workers.dev/departures?stopId=2030 net::ERR_INTERNET_DISCONNECTED",
+  "error: Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+  "FAILED https://ckan2.multimediagdansk.pl/departures?stopId=2031 net::ERR_INTERNET_DISCONNECTED",
+  "error: Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+  "warning: Błąd pobierania 2031 TypeError: Failed to fetch\n    at fetchWithTimeout (https://999gf999.github.io/tramwaje-gdansk/js/app.js:39:12)\n    at getJson (https://999gf999.github.io/tramwaje-gdansk/js/app.js:44:23)\n    at loadStop (https://999gf999.github.io/tramwaje-gdansk/js/app.js:57:26)\n    at async https://999gf999.github.io/tramwaje-gdansk/js/app.js:167:22\n    at async Promise.all (index 0)\n    at async refresh (https://999gf999.github.io/tramwaje-gdansk/js/app.js:164:5)",
+  "FAILED https://ckan2.multimediagdansk.pl/departures?stopId=2030 net::ERR_INTERNET_DISCONNECTED",
+  "error: Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+  "warning: Błąd pobierania 2030 TypeError: Failed to fetch\n    at fetchWithTimeout (https://999gf999.github.io/tramwaje-gdansk/js/app.js:39:12)\n    at getJson (https://999gf999.github.io/tramwaje-gdansk/js/app.js:44:23)\n    at loadStop (https://999gf999.github.io/tramwaje-gdansk/js/app.js:57:26)\n    at async https://999gf999.github.io/tramwaje-gdansk/js/app.js:167:22\n    at async Promise.all (index 1)\n    at async refresh (https://999gf999.github.io/tramwaje-gdansk/js/app.js:164:5)",
+  "RESP 200 https://999gf999.github.io/tramwaje-gdansk/icons/icon-192.png"
+ ]
+}
