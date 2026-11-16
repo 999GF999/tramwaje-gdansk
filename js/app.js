@@ -29,7 +29,6 @@
     };
   }
 
-  let useProxy = false;
   let timer = null;
   let inFlight = false;
   let lastSuccessAll = 0;
@@ -49,19 +48,15 @@
     return json;
   }
 
+  // API ZTM nie wysyła nagłówków CORS, więc z przeglądarki idziemy przez proxy.
+  // Bezpośredni endpoint zostaje jako awaryjny (gdyby ZTM kiedyś włączył CORS).
   async function loadStop(stopId) {
-    if (!useProxy) {
-      try {
-        return await getJson(CFG.apiBase, stopId);
-      } catch (e) {
-        // TypeError = błąd sieci / CORS. Spróbuj proxy, jeśli skonfigurowany.
-        if (!CFG.proxyBase) throw e;
-        const j = await getJson(CFG.proxyBase, stopId);
-        useProxy = true;
-        return j;
-      }
+    const bases = CFG.proxyBase ? [CFG.proxyBase, CFG.apiBase] : [CFG.apiBase];
+    let lastErr;
+    for (const base of bases) {
+      try { return await getJson(base, stopId); } catch (e) { lastErr = e; }
     }
-    return getJson(CFG.proxyBase, stopId);
+    throw lastErr;
   }
 
   function normalize(json) {

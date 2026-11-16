@@ -2,8 +2,9 @@
 window.TRAM_CONFIG = {
   // Bezpośredni, oficjalny endpoint Otwartych Danych Gdańska.
   apiBase: 'https://ckan2.multimediagdansk.pl/departures?stopId=',
-  // Opcjonalny proxy (np. Cloudflare Worker z katalogu proxy/), używany tylko
-  // gdy bezpośrednie zapytanie zostanie zablokowane (np. przez CORS).
+  // Proxy (Cloudflare Worker z katalogu proxy/). WYMAGANY: API ZTM nie wysyła
+  // nagłówków CORS (sprawdzone 16.11.2026: brak Access-Control-Allow-Origin,
+  // preflight → 403 "Invalid CORS request"), więc przeglądarka blokuje bezpośredni fetch.
   // Przykład: 'https://tramwaje-proxy.TWOJ-SUBDOMAIN.workers.dev/departures?stopId='
   proxyBase: '',
   stops: [
